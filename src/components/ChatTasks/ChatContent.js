@@ -5,13 +5,13 @@ import { GrNext } from "react-icons/gr";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import {IoMdSend} from 'react-icons/io'
 function ChatContent() {
-  const [pag, setPag] = useState([1, 2, 3, 4, 5]);
+  const [pag] = useState([1, 2, 3, 4, 5]);
   return (
     <div className="chatContent">
       <div className="Levels">
         <div className="paginationItems">
           {pag.map((item) => (
-            <a href="#">
+            <a href="/">
               <div>
                 <h4>{item}</h4>
                 <p>⭐{PagitionData[item].number}</p>

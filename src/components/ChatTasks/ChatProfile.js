@@ -21,14 +21,14 @@ function ChatProfile() {
         <img src="images/men.jpg" alt="" />
         <h3>Nurmatova Kamola</h3>
         <div className="personAbout">
-          <a href="#" className="col-4">
+          <a href="/" className="col-4">
             <div>
               <BsChatFill />
             </div>
             <p>Chatga o'tish</p>
           </a>
           <a
-            href="#"
+            href="/"
             onClick={toggle1}
             
             className='col-4'
@@ -53,7 +53,7 @@ function ChatProfile() {
             </div>
           </a>
           <a
-            href="#"
+            href="/"
             className="col-4"
             onClick={toggle2}
           >

@@ -1,0 +1,74 @@
+.Menu {
+   flex: 20%;
+   position: relative;
+   padding: 0 3%;
+   height:590px;
+   border-right: 1px solid rgba(0, 0, 0, 0.1);
+   .menuClose {
+      position: absolute;
+      border: none;
+      outline: none;
+      right: 3%;
+      background-color: red;
+      background-color: white;
+      font-size: 25px;
+      z-index: 10;
+      cursor: pointer;
+      svg {
+         color: red;
+      }
+   }
+   .logo-img {
+      margin-bottom: 50px;
+      img {
+         width: 100%;
+      }
+   }
+   .MenuItem, .DownItems {
+      a {
+         display: flex;
+         padding: 15px 0;
+         text-decoration: none;
+         color: #262626;
+         opacity: 0.3;
+         &:focus {
+            color: #262626;
+            opacity: 1;
+         }
+         svg {
+            margin-right: 5%;
+         }
+      }
+   }
+   .DownItems {
+      position: absolute;
+      bottom: 0;
+      display: block;
+      width: 70%;
+      a {
+         padding-bottom: 0;
+      }
+   }
+}
+
+@media screen and (min-width: 1200px)  {
+   .Menu {
+      .menuClose {
+         display: none;
+      }
+   }
+}
+@media screen and (max-width: 1200px) {
+   .show {
+      display: block;
+   }
+   .hide {
+      display: none;
+   }
+   .Menu {
+      position: absolute;
+      z-index: 100;
+      background-color: white;
+   }
+}
+

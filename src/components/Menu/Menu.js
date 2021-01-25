@@ -5,6 +5,7 @@ import MenuItem from "./MenuItem";
 import { WiDirectionUpRight } from "react-icons/wi";
 import { HiMenu } from "react-icons/hi";
 import {AiOutlineCloseCircle} from 'react-icons/ai'
+import { Link } from "react-router-dom";
 export class Menu extends Component {
   constructor(props) {
     super(props)
@@ -34,14 +35,14 @@ export class Menu extends Component {
             ))}
           </div>
           <div className="DownItems">
-            <a href="/">
+            <Link href="/">
               <WiDirectionUpRight />
               <p>Home pdp.uz</p>
-            </a>
-            <a href="/">
+            </Link>
+            <Link href="/">
               <WiDirectionUpRight />
               <p>Chiqish</p>
-            </a>
+            </Link>
           </div>
         </div>
       </React.Fragment>

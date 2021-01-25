@@ -1,7 +1,12 @@
 .App {
   display: flex;
-  padding-top: 20px;
+  /* padding-top: 20px; */
   position: relative;
+  /* width: 100%; */
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -36,5 +41,15 @@
 @media screen and (min-width: 1200px) {
   .App > button {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .App {
+    width: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 import { GrSort } from "react-icons/gr";
+import { Link } from "react-router-dom";
 import ChatItem from "./ChatItem";
 import { ChatItemData } from "./ChatItemData";
 function ChatTaskList() {
@@ -8,14 +9,14 @@ function ChatTaskList() {
     <div className="chatTaskList">
       <ul>
         <li>
-          <a href="#fdsa">
+          <Link href="/">
             Vazifalar <span>3</span>
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#fdsa">
+          <Link href="/">
             Chat <span>5</span>
-          </a>
+          </Link>
         </li>
       </ul>
       <form action="#">

@@ -1,9 +1,10 @@
 .chatTask {
    flex: 80%;
-   height: 590px;
-   padding: 0 3%;
+   height: 100vh;
+   padding: 20px 3% 0 3%;
    .MentorTop {
       display: flex;
+      height: 30px;
       align-items: center;
       justify-content: flex-end;
       div {
@@ -15,6 +16,7 @@
    }
    h2 {
       margin: 10px 0;
+      height: 30px;
    }
    .mainChatTask {
       background-color: #F8F8F8;
@@ -25,6 +27,7 @@
          ul {
             display: flex;
             list-style-type: none;
+            height: 50px;
             li {
                flex: 50%;
                position: relative;
@@ -37,7 +40,7 @@
                   color: black;
 
                   &:focus {
-                     border-bottom: 2px solid green;
+                     border-bottom: 2px solid #00B533;
                   }
                }
                span {
@@ -53,8 +56,9 @@
             }
          }
          form {
+            height: 50px;
             display: flex;
-            padding: 4% 3%;
+            padding: 5px;
             button {
                border: none;
                background-color: #F8F8F8;
@@ -72,15 +76,15 @@
             }
          }
          .chatPeople {
-            height: 420px;
             overflow-y: auto;
+            height: calc(100vh - 200px);
             .chatItem {
                background-color: white;
                padding: 5px 10px;
                margin:2px 1px;
                display: flex;
                &:hover {
-                  background-color: green;
+                  background-color: #00B533;
                   cursor: pointer;
                }
                .chatImg {
@@ -115,6 +119,7 @@
       .chatContent {
          flex: 50%;
          .Levels {
+            height: 80px;
             display: flex;
             background: #e5e5e5;
             .paginationItems {
@@ -152,14 +157,13 @@
                   background-color: rgba(0, 0, 0, 0.2);
                   height: 80%;
                   margin: 0 10%;
-                  
                }
             }
          }
          .LevelsDown {
+            height: 70px;
             display: flex;
             background-color: white;
-            margin: 2px 0;
             .taskName {
                flex: 45%;
                display: flex;
@@ -181,7 +185,7 @@
                      span {
                         float: right;
                      }
-                     margin-bottom: 5%;
+                     margin-bottom: 5px;
                   }
                   div {
                      display: flex;
@@ -220,7 +224,6 @@
             }
          }
          .chatSection {
-            height: 370px;
             background-color: white;
             padding: 0 3%;
             display: flex;
@@ -228,68 +231,75 @@
             // align-items: flex-end;
             justify-content: flex-end;
 
-            .firstchat {
-               margin-right: 30%;
-            }
-            .firstchat, .secondchat {
-               padding: 3%;
-               border-radius: 10px;
-               background: #F8F8F8;
-               margin-bottom: 3%;
-               & > p {
-                  text-align: end;
-                  color: red;
+            .chatMenu {
+               display: flex;
+               flex-direction: column;
+               justify-content: flex-end;
+               overflow-y: auto;
+               height: calc(100vh - 290px);
+               .firstchat {
+                  margin-right: 30%;
                }
-               & > div {
-                  &:first-child {
-                     background: #F8F8F8;
-                     display: flex;
-                     .upload-btn-wrapper {
-                        position: relative;
-                        overflow: hidden;
-                        display: inline-block;
-                        .btn {
-                           border: 2px solid gray;
-                           color: gray;
-                           background-color: white;
-                           padding: 4px 7px;
-                           border-radius: 50%;
-                           font-size: 20px;
-                           font-weight: bold;
-                           }
+               .firstchat, .secondchat {
+                  padding: 3%;
+                  border-radius: 10px;
+                  background: #F8F8F8;
+                  margin-bottom: 3%;
+                  & > p {
+                     text-align: end;
+                     color: red;
+                  }
+                  & > div {
+                     &:first-child {
+                        background: #F8F8F8;
+                        display: flex;
+                        .upload-btn-wrapper {
+                           position: relative;
+                           overflow: hidden;
+                           display: inline-block;
+                           .btn {
+                              border: 2px solid gray;
+                              color: gray;
+                              background-color: white;
+                              padding: 4px 7px;
+                              border-radius: 50%;
+                              font-size: 20px;
+                              font-weight: bold;
+                              }
 
-                        input[type=file] {
-                           font-size: 100px;
-                           position: absolute;
-                           left: 0;
-                           top: 0;
-                           opacity: 0;
+                           input[type=file] {
+                              font-size: 100px;
+                              position: absolute;
+                              left: 0;
+                              top: 0;
+                              opacity: 0;
+                           }
+                        }
+                        .fileAbout {
+                           flex: 1;
+                           margin-left: 5%;
                         }
                      }
-                     .fileAbout {
-                        flex: 1;
-                        margin-left: 5%;
+                     &:nth-child(2) {
+                        padding: 2% 0;
+                        background: #F8F8F8;
+                        p {
+                           font-size: 14px;
+                        }
                      }
                   }
-                  &:nth-child(2) {
-                     padding: 2% 0;
-                     background: #F8F8F8;
-                     p {
-                        font-size: 14px;
-                     }
+                  & > p {
+                     font-family: SF Pro Display;
+                     font-style: italic;
+                     font-weight: 300;
+                     font-size: 12px;
+                     line-height: 16px;
+                     color: black;
                   }
                }
-               & > p {
-                  font-family: SF Pro Display;
-                  font-style: italic;
-                  font-weight: 300;
-                  font-size: 12px;
-                  line-height: 16px;
-                  color: black;
+               .secondchat {
+                  margin-left: 30%;
                }
-            }
-            .secondchat {
-               margin-left: 30%;
             }
             .typeComment {
                display: flex;
@@ -342,6 +352,7 @@
       .chatProfile {
          flex: 25%;
          padding: 1px;
+         height: calc(100vh-100px);
          .chatPerson {
             padding: 10px 8% 0 8%;
             background-color: white;
@@ -360,21 +371,19 @@
                display: flex;
                margin-bottom: 40px;
 
-               // .flex {
-               //    display: flex;
-               // }
-
-               // .none {
-               //    display: none;
-               // }
                .col-4 {
                   display: flex;
                   align-items: center;
                   flex-direction: column;
                   flex: 33.3%;
-                  text-decoration: none;
+                  border: 0;
+                  background: white;
                   position: relative;
                   color: black;
+                  &:focus {
+                     border: none;
+                     outline: none;
+                  }
                   & > div:first-child {
                      background-color: #e5e5e5;
                      margin-bottom: 5px;

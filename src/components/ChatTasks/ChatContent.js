@@ -4,6 +4,7 @@ import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import {IoMdSend} from 'react-icons/io'
+import { Link } from "react-router-dom";
 function ChatContent() {
   const [pag] = useState([1, 2, 3, 4, 5]);
   return (
@@ -11,13 +12,13 @@ function ChatContent() {
       <div className="Levels">
         <div className="paginationItems">
           {pag.map((item) => (
-            <a href="/">
+            <Link href="/">
               <div>
                 <h4>{item}</h4>
                 <p>⭐{PagitionData[item].number}</p>
                 <h5>{PagitionData[item].level}</h5>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
         <div className="paginationController">
@@ -53,49 +54,50 @@ function ChatContent() {
         </div>
       </div>
       <div className="chatSection">
-        <div className="firstchat">
-          <div>
-            <form class="upload-btn-wrapper">
-              <button class="btn">
-                <AiOutlineCloudUpload />
-              </button>
-              <input type="file" name="myfile" />
-            </form>
-            <div className="fileAbout">
-              <h4>Ikkinchi topshiriq</h4>
-              <p>3.5MB</p>
+        <div className="chatMenu">
+          <div className="firstchat">
+            <div>
+              <form class="upload-btn-wrapper">
+                <button class="btn">
+                  <AiOutlineCloudUpload />
+                </button>
+                <input type="file" name="myfile" />
+              </form>
+              <div className="fileAbout">
+                <h4>Ikkinchi topshiriq</h4>
+                <p>3.5MB</p>
+              </div>
             </div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet,
+                nemo.
+              </p>
+            </div>
+            <p>13.08.20 | 13:50</p>
           </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet,
-              nemo.
-            </p>
+          <div className="secondchat">
+            <div>
+              <div class="upload-btn-wrapper">
+                <button class="btn">
+                  <AiOutlineCloudUpload />
+                </button>
+                <input type="file" name="myfile" />
+              </div>
+              <div className="fileAbout">
+                <h4>Ikkinchi topshiriq</h4>
+                <p>3.5MB</p>
+              </div>
+            </div>
+            <div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet,
+                nemo.
+              </p>
+            </div>
+            <p>13.08.20 | 13:50</p>
           </div>
-          <p>13.08.20 | 13:50</p>
         </div>
-        <div className="secondchat">
-          <div>
-            <div class="upload-btn-wrapper">
-              <button class="btn">
-                <AiOutlineCloudUpload />
-              </button>
-              <input type="file" name="myfile" />
-            </div>
-            <div className="fileAbout">
-              <h4>Ikkinchi topshiriq</h4>
-              <p>3.5MB</p>
-            </div>
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet,
-              nemo.
-            </p>
-          </div>
-          <p>13.08.20 | 13:50</p>
-        </div>
-
         <div className="typeComment">
           <form class="upload-btn-wrapper">
             <button class="btn">

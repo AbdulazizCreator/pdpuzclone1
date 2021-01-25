@@ -21,14 +21,13 @@ function ChatProfile() {
         <img src="images/men.jpg" alt="" />
         <h3>Nurmatova Kamola</h3>
         <div className="personAbout">
-          <a href="/" className="col-4">
+          <button href="/" className="col-4">
             <div>
               <BsChatFill />
             </div>
             <p>Chatga o'tish</p>
-          </a>
-          <a
-            href="/"
+          </button>
+          <button
             onClick={toggle1}
             
             className='col-4'
@@ -51,9 +50,8 @@ function ChatProfile() {
                 <p>1.1 Boshlang’ich tushunchalar bo’yicha tushuncha</p>
               </div>
             </div>
-          </a>
-          <a
-            href="/"
+          </button>
+          <button
             className="col-4"
             onClick={toggle2}
           >
@@ -75,7 +73,7 @@ function ChatProfile() {
                 <BsChevronDown />
               </div>
             </div>
-          </a>
+          </button>
         </div>
         <div className="personStars">
           <AiFillStar />

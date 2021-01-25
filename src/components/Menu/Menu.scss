@@ -2,7 +2,8 @@
    flex: 20%;
    position: relative;
    padding: 0 3%;
-   height:590px;
+   height: 100vh;
+   padding-top: 20px;
    border-right: 1px solid rgba(0, 0, 0, 0.1);
    .menuClose {
       position: absolute;
@@ -34,8 +35,11 @@
          &:focus {
             color: #262626;
             opacity: 1;
+            img {
+               color: #00B533;
+            }
          }
-         svg {
+         img {
             margin-right: 5%;
          }
       }

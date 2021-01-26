@@ -5,6 +5,9 @@
    height: 100vh;
    padding-top: 20px;
    border-right: 1px solid rgba(0, 0, 0, 0.1);
+   .menuToggle {
+      margin-right: 6%;
+   }
    .menuClose {
       position: absolute;
       border: none;
@@ -46,7 +49,7 @@
    }
    .DownItems {
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       display: block;
       width: 70%;
       a {

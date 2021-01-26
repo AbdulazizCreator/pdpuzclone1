@@ -1,6 +1,5 @@
 import React from "react";
 import "./chatTask.scss";
-import { BsFillPersonFill } from "react-icons/bs";
 import ChatTaskList from "./ChatTaskList";
 import ChatContent from "./ChatContent";
 import ChatProfile from "./ChatProfile";
@@ -11,10 +10,10 @@ function ChatTask() {
       <div className="MentorTop">
         <p>Dilshod Mirsoatov</p>
         <div>
-          <BsFillPersonFill />
+          <img src="images/vectorTop2.svg" alt=""/>
         </div>
         <div>
-          <BsFillPersonFill />
+          <img src="images/vectorTop.svg" alt=""/>
         </div>
       </div>
       <h2>VAZIFALAR VA CHAT</h2>

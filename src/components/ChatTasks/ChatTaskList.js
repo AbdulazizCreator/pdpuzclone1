@@ -9,12 +9,12 @@ function ChatTaskList() {
     <div className="chatTaskList">
       <ul>
         <li>
-          <Link href="/">
+          <Link to="/">
             Vazifalar <span>3</span>
           </Link>
         </li>
         <li>
-          <Link href="/">
+          <Link to="/">
             Chat <span>5</span>
           </Link>
         </li>
@@ -29,8 +29,9 @@ function ChatTaskList() {
         </button>
       </form>
       <div className="chatPeople">
-        {ChatItemData.map((item) => (
+        {ChatItemData.map((item, index) => (
           <ChatItem
+            index={index}
             name={item.name}
             img={item.img}
             messageNumber={item.messageNumber}

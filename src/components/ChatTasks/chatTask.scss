@@ -12,6 +12,10 @@
          padding: 5px;
          border-radius: 50%;
          margin-left: 15px;
+         img {
+            width: 20px;
+            height: 15px;
+         }
       }
    }
    h2 {
@@ -38,7 +42,9 @@
                   display: block;
                   text-decoration: none;
                   color: black;
-
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 16px;
                   &:focus {
                      border-bottom: 2px solid #00B533;
                   }
@@ -65,6 +71,10 @@
                &:first-child {
                   padding-right: 10px;
                }
+               &:focus {
+                  outline: none;
+                  cursor: pointer;
+               }
             }
             input {
                border: none;
@@ -83,9 +93,29 @@
                padding: 5px 10px;
                margin:2px 1px;
                display: flex;
-               &:hover {
+               border: none;
+               display: flex;
+               align-items: center;
+               &:focus {
                   background-color: #00B533;
                   cursor: pointer;
+                  border: none;
+                  outline: none;
+                  .Information {
+                     div {
+                        h5 {
+                           color: white;
+                        }
+                        p {
+                           opacity: 1;
+                           color: white;
+                        }
+                        span {
+                           background-color: white;
+                           color: #00B533;
+                        }
+                     }
+                  }
                }
                .chatImg {
                   flex: 20%;
@@ -97,18 +127,30 @@
                .Information {
                   flex: 80%;
                   margin-left: 5%;
-                  div {
+                  div { 
                      display: flex;
                      justify-content: space-between;
-                     align-items: flex-end;
+                     h5 {
+                        font-weight: 600;
+                        font-size: 13px;
+                        line-height: 16px;
+                        color: #000000;
+                     }
                      p {
-                        font-size: 12px;
+                        font-size: 10px;
                         opacity: 0.3;
+                        text-align: left;
                      }
                      span {
-                        background-color: red;
+                        background: #DE1E3A;;
+                        width: 15px;
+                        height: 15px;
+                        font-size: 10px;
                         padding: 0 5px;
                         border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         color: white;
                      }
                   }
@@ -125,7 +167,8 @@
             .paginationItems {
                flex: 80%;
                display: flex;
-               a {
+               button {
+                  border: none;
                   flex: 20%;
                   padding: 1%;
                   border-radius: 3px;
@@ -136,6 +179,8 @@
                   color: rgba(0, 0, 0, 0.3);
                   &:focus {
                      background-color: white;
+                     outline: none;
+                     color: black;
                   }
                   div {
                      h4, h5, p {
@@ -177,6 +222,9 @@
                flex: 55%;
                padding: 1% 0;
                & > div {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
                   padding: 0 10%;
                   width: 100%;
                   height: 100%;
@@ -204,8 +252,11 @@
                            border-top: 5px solid transparent;
 	                        border-bottom: 5px solid transparent;
                            width: 100%;
-                           height: 15px;
+                           height: 10px;
                            border-radius: 10px;
+                           &:focus {
+                              outline: none;
+                           }
                         }
 
                         .slider::-webkit-slider-thumb {
@@ -226,19 +277,11 @@
          .chatSection {
             background-color: white;
             padding: 0 3%;
-            display: flex;
-            flex-direction: column;
-            // align-items: flex-end;
-            justify-content: flex-end;
-
             .chatMenu {
-               display: flex;
-               flex-direction: column;
-               justify-content: flex-end;
-               overflow-y: auto;
                height: calc(100vh - 290px);
+               overflow-y: auto;
                .firstchat {
-                  margin-right: 30%;
+                  margin-right: 20%;
                }
                .firstchat, .secondchat {
                   padding: 3%;
@@ -278,6 +321,16 @@
                         .fileAbout {
                            flex: 1;
                            margin-left: 5%;
+                           h4 {
+                              font-weight: 600;
+                              font-size: 14px;
+                              line-height: 20px;
+                           }
+                           p {
+                              font-size: 14px;
+                              line-height: 26px;
+                              color: #898989;
+                           }
                         }
                      }
                      &:nth-child(2) {
@@ -285,6 +338,8 @@
                         background: #F8F8F8;
                         p {
                            font-size: 14px;
+                           line-height: 16px;
+                           color: black;
                         }
                      }
                   }
@@ -298,7 +353,7 @@
                   }
                }
                .secondchat {
-                  margin-left: 30%;
+                  margin-left: 20%;
                }
             }
             .typeComment {

@@ -1,14 +1,28 @@
 import "./App.css";
-import Main from "./components/index";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Menu from "./components/Menu/Menu";
+import ChatTask from "./components/ChatTasks/ChatTask";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Menu />
         <Switch>
-          <Route path="/">
-            <Main />
+          <Route exact path="/">
+            <ChatTask />
+          </Route>
+          <Route exact path="/dashboard">
+            
+          </Route>
+          <Route exact path="/qurilmalar">
+
+          </Route>
+          <Route exact path="/zoomchat">
+
+          </Route>
+          <Route exact path="/sozlamalar">
+
           </Route>
         </Switch>
       </BrowserRouter>

@@ -4,21 +4,20 @@ import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import {IoMdSend} from 'react-icons/io'
-import { Link } from "react-router-dom";
 function ChatContent() {
   const [pag] = useState([1, 2, 3, 4, 5]);
   return (
     <div className="chatContent">
       <div className="Levels">
         <div className="paginationItems">
-          {pag.map((item) => (
-            <Link href="/">
+          {pag.map((item, index) => (
+            <button key={index}>
               <div>
                 <h4>{item}</h4>
                 <p>⭐{PagitionData[item].number}</p>
                 <h5>{PagitionData[item].level}</h5>
               </div>
-            </Link>
+            </button>
           ))}
         </div>
         <div className="paginationController">
@@ -47,6 +46,7 @@ function ChatContent() {
                   max="100"
                   value="53"
                   className="slider"
+                  readOnly
                 />
               </div>
             </div>
@@ -57,8 +57,8 @@ function ChatContent() {
         <div className="chatMenu">
           <div className="firstchat">
             <div>
-              <form class="upload-btn-wrapper">
-                <button class="btn">
+              <form className="upload-btn-wrapper">
+                <button className="btn">
                   <AiOutlineCloudUpload />
                 </button>
                 <input type="file" name="myfile" />
@@ -78,8 +78,8 @@ function ChatContent() {
           </div>
           <div className="secondchat">
             <div>
-              <div class="upload-btn-wrapper">
-                <button class="btn">
+              <div className="upload-btn-wrapper">
+                <button className="btn">
                   <AiOutlineCloudUpload />
                 </button>
                 <input type="file" name="myfile" />
@@ -99,8 +99,8 @@ function ChatContent() {
           </div>
         </div>
         <div className="typeComment">
-          <form class="upload-btn-wrapper">
-            <button class="btn">
+          <form className="upload-btn-wrapper">
+            <button className="btn">
               <AiOutlineCloudUpload />
             </button>
             <input type="file" name="myfile" />

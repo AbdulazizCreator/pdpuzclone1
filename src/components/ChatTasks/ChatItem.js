@@ -2,13 +2,13 @@ import React from "react";
 
 function ChatItem(props) {
   return (
-    <div className="chatItem">
+    <button className="chatItem" key={props.index}>
       <div className="chatImg">
         <img src={props.img} alt="" />
       </div>
       <div className="Information">
         <div>
-          <h4>{props.name}</h4>
+          <h5>{props.name}</h5>
           <p>{props.time}</p>
         </div>
         <div>
@@ -16,7 +16,7 @@ function ChatItem(props) {
           <span>{props.messageNumber}</span>
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 

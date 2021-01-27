@@ -1,31 +1,19 @@
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Menu from "./components/Menu/Menu";
-import ChatTask from "./components/ChatTasks/ChatTask";
+import UsersPage from "./pages/UsersPage";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Menu />
+    <div id="App">
+      <Router>
         <Switch>
           <Route exact path="/">
-            <ChatTask />
+            <UsersPage />
           </Route>
-          <Route exact path="/dashboard">
-            
-          </Route>
-          <Route exact path="/qurilmalar">
-
-          </Route>
-          <Route exact path="/zoomchat">
-
-          </Route>
-          <Route exact path="/sozlamalar">
-
-          </Route>
+          <Route exact path="/"></Route>
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

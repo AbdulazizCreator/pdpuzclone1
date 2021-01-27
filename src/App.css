@@ -1,55 +1,59 @@
-.App {
-  display: flex;
-  /* padding-top: 20px; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: SF-Pro-Display-Regular;
+}
+
+@font-face {
+  font-family: SF-Pro-Display-Regular;
+  src: url("assets/fonts/SF-Pro-Display-Regular.otf");
+}
+
+@font-face {
+  font-family: SF-Pro-Display-Semibold;
+  src: url("assets/fonts/SF-Pro-Display-Semibold.otf");
+}
+
+#root {
   position: relative;
-  /* width: 100%; */
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-::-webkit-scrollbar {
-  width: 5px;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+#App {
+  margin: auto;
+  padding: 40px 55px 0 55px;
+  max-width: 1600px;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+@media screen and (max-width: 1040px) {
+  #App {
+    padding: 10px 5px 0 5px;
+  }
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.App > button {
+.menuOpen {
   position: absolute;
-  border: none;
-  outline: none;
-  left: 5%;
-  top: 20px;
-  color: rgba(0, 0, 0, 0.9);
-  background-color: white;
-  font-size: 25px;
-  z-index: 10;
+  top: 15px;
+  left: 5px;
   cursor: pointer;
 }
 
+.menuClose {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
 @media screen and (min-width: 1200px) {
-  .App > button {
+  .menuOpen,
+  .menuClose {
     display: none;
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .App {
-    width: 100%;
-    padding-right: 15%;
-    padding-left: 15%;
-    margin-right: auto;
-    margin-left: auto;
+/* @media screen and (min-width: 1400px) {
+  #App {
+    padding: 40px 15%;
+    max-width: 100%;
   }
-}
+} */

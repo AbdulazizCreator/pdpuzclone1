@@ -1,6 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Select from "react-select";
+import { UsersData } from "./UsersData";
 
 const UsersCom = () => {
   const options1 = [
@@ -24,6 +25,8 @@ const UsersCom = () => {
   const [sortOpen, setSortOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
   const [users, setUsers] = useState([]);
+  // const users = usersData;
+
   const handleChangeKurs = (e) => {
     setSelectedOption1(e);
   };
@@ -45,7 +48,7 @@ const UsersCom = () => {
   const [allChecked, setAllChecked] = useState(false);
   const [isChecked, setIsChecked] = useState();
   const [loading, setLoading] = useState(true);
-  const [selectedUser, setSelectedUser] = useState("")
+  const [selectedUser, setSelectedUser] = useState("");
   const handleAllCheck = (e) => {
     setAllChecked(e.target.checked);
   };
@@ -76,13 +79,14 @@ const UsersCom = () => {
   }, [users]);
 
   useEffect(() => {
-    axios
-      .get("http://jsonplaceholder.typicode.com/users")
-      .then((res) => setUsers(res.data))
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => {});
+    setUsers(UsersData);
+    // axios
+    //   .get("http://jsonplaceholder.typicode.com/users")
+    //   .then((res) => setUsers(res.data))
+    //   .catch((err) => {
+    //     console.log(err);
+    //   })
+    //   .finally(() => {});
   }, []);
 
   return (
@@ -270,18 +274,12 @@ const UsersCom = () => {
                       </div>
                     </div>
                   </td>
-                  <td
-                  >
+                  <td>
                     TgContact: NO <br /> TgGroup: 1
                   </td>
-                  <td
-                  >
-                    2
-                  </td>
+                  <td>2</td>
                   <td style={{ padding: "30px" }}>
-                    <h6>
-                      1 000 000 UZS
-                    </h6>
+                    <h6>1 000 000 UZS</h6>
                     <p className="mb-0">Registration</p>
                   </td>
                   <td>

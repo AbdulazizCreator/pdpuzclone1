@@ -22,7 +22,7 @@
 #App {
   margin: auto;
   padding: 40px 55px 0 55px;
-  max-width: 1600px;
+  /* max-width: 1600px; */
 }
 
 @media screen and (max-width: 1040px) {
@@ -51,9 +51,12 @@
   }
 }
 
-/* @media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
   #App {
-    padding: 40px 15%;
+    padding: 40px 40px 0 40px;
     max-width: 100%;
   }
-} */
+  #menu .Menus p {
+    font-size: 30px;
+  }
+}
